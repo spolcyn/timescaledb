@@ -519,8 +519,9 @@ get_timebucketfnoid()
 	Oid funcoid;
 	const char *funcname = TIMEBUCKETFN;
 	CatCList *catlist = SearchSysCacheList1(PROCNAMEARGSNSP, CStringGetDatum(funcname));
+	int i;
 
-	for (int i = 0; i < catlist->n_members; i++)
+	for (i = 0; i < catlist->n_members; i++)
 	{
 		HeapTuple proctup = &catlist->members[i]->tuple;
 		funcoid = ObjectIdGetDatum(HeapTupleGetOid(proctup));
