@@ -9,10 +9,12 @@ accidentally triggering the load of a previous DB version.**
 **Bugfixes**
 * #1915 Check for database in extension_current_state
 * #1918 Unify chunk index creation
+* #1932 Change compression locking order
 
 **Thanks**
 * @dmitri191 for reporting an issue with failing background workers
 * @nomanor for reporting an issue with expression index with table references
+* @nbouscal for reporting an issue with compression jobs locking referenced tables
 
 ## 1.7.1 (2020-05-18)
 
